@@ -46,7 +46,7 @@ try:
                 features=(
                     []
                     if platform.python_implementation() == "PyPy"
-                    else ["pyo3/abi3-py36"]
+                    else ["pyo3/abi3-py37"]
                 ),
                 rust_version=">=1.41.0",
             )

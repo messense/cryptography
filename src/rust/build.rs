@@ -3,7 +3,6 @@ use std::fs;
 use std::path::{Path, MAIN_SEPARATOR};
 use std::process::Command;
 
-use pyo3_build_config::InterpreterConfig;
 
 fn main() {
     let target = env::var("TARGET").unwrap();
@@ -21,8 +20,7 @@ fn main() {
         }
     }
 
-    let pyo3_interpreter =
-        InterpreterConfig::from_pyo3_export_config().expect("could not find pyo3 interpreter");
+    let pyo3_interpreter = pyo3_build_config::get();
 
     let out_dir = env::var("OUT_DIR").unwrap();
 

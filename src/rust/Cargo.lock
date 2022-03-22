@@ -37,9 +37,9 @@ dependencies = [
 
 [[package]]
 name = "autocfg"
-version = "1.0.1"
+version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cdb031dd78e28731d87d56cc8ffef4a8f36ca26c38fe2de700543e627f8a464a"
+checksum = "d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa"
 
 [[package]]
 name = "base64"
@@ -55,9 +55,9 @@ checksum = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
 
 [[package]]
 name = "cc"
-version = "1.0.72"
+version = "1.0.73"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "22a9137b95ea06864e018375b72adfb7db6e6f68cfc8df5a04d00288050485ee"
+checksum = "2fff2a6927b3bb87f9595d67196a70493f627687a71d87a0d692242c33f58c11"
 
 [[package]]
 name = "cfg-if"
@@ -110,9 +110,9 @@ checksum = "00b0228411908ca8685dba7fc2cdd70ec9990a6e753e89b6ac91a84c40fbaf4b"
 
 [[package]]
 name = "indoc"
-version = "1.0.3"
+version = "1.0.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e5a75aeaaef0ce18b58056d306c27b07436fbb34b8816c53094b76dd81803136"
+checksum = "e7906a9fababaeacb774f72410e497a1d18de916322e33797bb2cd29baa23c9e"
 dependencies = [
  "unindent",
 ]
@@ -134,15 +134,15 @@ checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
 
 [[package]]
 name = "libc"
-version = "0.2.112"
+version = "0.2.121"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1b03d17f364a3a042d5e5d46b053bbbf82c92c9430c592dd4c064dc6ee997125"
+checksum = "efaa7b300f3b5fe8eb6bf21ce3895e1751d9665086af2d64b42f19701015ff4f"
 
 [[package]]
 name = "lock_api"
-version = "0.4.5"
+version = "0.4.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "712a4d093c9976e24e7dbca41db895dabcbac38eb5f4045393d17a95bdfb1109"
+checksum = "88943dd7ef4a2e5a4bfa2753aaab3013e34ce2533d1996fb18ef591e315e2b3b"
 dependencies = [
  "scopeguard",
 ]
@@ -168,14 +168,14 @@ dependencies = [
 
 [[package]]
 name = "once_cell"
-version = "1.9.0"
+version = "1.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "da32515d9f6e6e489d7bc9d84c71b060db7247dc035bbe44eac88cf87486d8d5"
+checksum = "87f3e037eac156d1775da914196f0f37741a274155e34a0b7e427c35d2a2ecb9"
 
 [[package]]
 name = "openssl"
 version = "0.10.38"
-source = "git+https://github.com/sfackler/rust-openssl.git#16f65124674afd935b52ba6e6b10f963fb440968"
+source = "git+https://github.com/sfackler/rust-openssl.git#973936042c31a868d0ade4f3bcbd25d317015c05"
 dependencies = [
  "bitflags",
  "cfg-if",
@@ -189,7 +189,7 @@ dependencies = [
 [[package]]
 name = "openssl-macros"
 version = "0.1.0"
-source = "git+https://github.com/sfackler/rust-openssl.git#16f65124674afd935b52ba6e6b10f963fb440968"
+source = "git+https://github.com/sfackler/rust-openssl.git#973936042c31a868d0ade4f3bcbd25d317015c05"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -199,7 +199,7 @@ dependencies = [
 [[package]]
 name = "openssl-sys"
 version = "0.9.72"
-source = "git+https://github.com/sfackler/rust-openssl.git#16f65124674afd935b52ba6e6b10f963fb440968"
+source = "git+https://github.com/sfackler/rust-openssl.git#973936042c31a868d0ade4f3bcbd25d317015c05"
 dependencies = [
  "autocfg",
  "cc",
@@ -307,30 +307,40 @@ dependencies = [
 
 [[package]]
 name = "pyo3"
-version = "0.15.1"
-source = "git+https://github.com/aganders3/pyo3?branch=export-conf#4876c45168b7ee157d5a7e96d1abfbede43402f0"
+version = "0.16.2"
+source = "git+https://github.com/aganders3/pyo3?branch=export-conf#4a62a62caedfcb338265853aab42890c2c5ec6ff"
 dependencies = [
  "cfg-if",
  "indoc",
  "libc",
  "parking_lot",
  "pyo3-build-config",
+ "pyo3-ffi",
  "pyo3-macros",
  "unindent",
 ]
 
 [[package]]
 name = "pyo3-build-config"
-version = "0.15.1"
-source = "git+https://github.com/aganders3/pyo3?branch=export-conf#4876c45168b7ee157d5a7e96d1abfbede43402f0"
+version = "0.16.2"
+source = "git+https://github.com/aganders3/pyo3?branch=export-conf#4a62a62caedfcb338265853aab42890c2c5ec6ff"
 dependencies = [
  "once_cell",
 ]
 
 [[package]]
+name = "pyo3-ffi"
+version = "0.16.2"
+source = "git+https://github.com/aganders3/pyo3?branch=export-conf#4a62a62caedfcb338265853aab42890c2c5ec6ff"
+dependencies = [
+ "libc",
+ "pyo3-build-config",
+]
+
+[[package]]
 name = "pyo3-macros"
-version = "0.15.1"
-source = "git+https://github.com/aganders3/pyo3?branch=export-conf#4876c45168b7ee157d5a7e96d1abfbede43402f0"
+version = "0.16.2"
+source = "git+https://github.com/aganders3/pyo3?branch=export-conf#4a62a62caedfcb338265853aab42890c2c5ec6ff"
 dependencies = [
  "proc-macro2",
  "pyo3-macros-backend",
@@ -340,8 +350,8 @@ dependencies = [
 
 [[package]]
 name = "pyo3-macros-backend"
-version = "0.15.1"
-source = "git+https://github.com/aganders3/pyo3?branch=export-conf#4876c45168b7ee157d5a7e96d1abfbede43402f0"
+version = "0.16.2"
+source = "git+https://github.com/aganders3/pyo3?branch=export-conf#4a62a62caedfcb338265853aab42890c2c5ec6ff"
 dependencies = [
  "proc-macro2",
  "pyo3-build-config",
@@ -351,18 +361,18 @@ dependencies = [
 
 [[package]]
 name = "quote"
-version = "1.0.14"
+version = "1.0.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "47aa80447ce4daf1717500037052af176af5d38cc3e571d9ec1c7353fc10c87d"
+checksum = "b4af2ec4714533fcdf07e886f17025ace8b997b9ce51204ee69b6da831c3da57"
 dependencies = [
  "proc-macro2",
 ]
 
 [[package]]
 name = "redox_syscall"
-version = "0.2.10"
+version = "0.2.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8383f39639269cde97d255a32bdb68c047337295414940c68bdd30c2e13203ff"
+checksum = "8380fe0152551244f0747b1bf41737e0f8a74f97a14ccefd1148187271634f3c"
 dependencies = [
  "bitflags",
 ]
@@ -375,9 +385,9 @@ checksum = "d29ab0c6d3fc0ee92fe66e2d99f700eab17a8d57d1c1d3b748380fb20baa78cd"
 
 [[package]]
 name = "smallvec"
-version = "1.7.0"
+version = "1.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1ecab6c735a6bb4139c0caafd0cc3635748bbb3acf4550e8138122099251f309"
+checksum = "f2dd574626839106c320a323308629dcb1acfc96e32a8cba364ddc61ac23ee83"
 
 [[package]]
 name = "stable_deref_trait"
@@ -387,9 +397,9 @@ checksum = "a8f112729512f8e442d81f95a8a7ddf2b7c6b8a1a6f509a95864142b30cab2d3"
 
 [[package]]
 name = "syn"
-version = "1.0.85"
+version = "1.0.89"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a684ac3dcd8913827e18cd09a68384ee66c1de24157e3c556c9ab16d85695fb7"
+checksum = "ea297be220d52398dcc07ce15a209fce436d361735ac1db700cab3b6cdfb9f54"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -404,9 +414,9 @@ checksum = "8ccb82d61f80a663efe1f787a51b16b5a51e3314d6ac365b08639f52387b33f3"
 
 [[package]]
 name = "unindent"
-version = "0.1.7"
+version = "0.1.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f14ee04d9415b52b3aeab06258a3f07093182b88ba0f9b8d203f211a7a7d41c7"
+checksum = "514672a55d7380da379785a4d70ca8386c8883ff7eaae877be4d2081cebe73d8"
 
 [[package]]
 name = "vcpkg"

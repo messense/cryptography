@@ -9,7 +9,7 @@ publish = false
 lazy_static = "1"
 # pyo3 = { version = "0.15.1" }
 # TODO: update after merge/release in pyo3
-pyo3 = { git = "https://github.com/aganders3/pyo3", branch = "export-conf", version = "0.15.1" }
+pyo3 = { git = "https://github.com/aganders3/pyo3", branch = "export-conf", version = "0.16.2" }
 asn1 = { version = "0.8.7", default-features = false, features = ["derive"] }
 pem = "1.0"
 chrono = { version = "0.4", default-features = false, features = ["alloc", "clock"] }
@@ -24,8 +24,8 @@ cc = "1.0.72"
 [build-dependencies.pyo3-build-config]
 git = "https://github.com/aganders3/pyo3"
 branch = "export-conf"
-version = "0.15.1"
-features = ["export-config"]
+version = "0.16.2"
+features = ["resolve-config"]
 
 [features]
 extension-module = ["pyo3/extension-module"]
